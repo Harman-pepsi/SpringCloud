@@ -25,7 +25,7 @@ public class PaymentController {
     private IPaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult create(Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
         int iResult = paymentService.create(payment);
         log.info("插入结果--->" + iResult);
         return iResult > 0 ? new CommonResult<>(200,"插入成功!",iResult) : new CommonResult<>(500,"插入失败!",null);

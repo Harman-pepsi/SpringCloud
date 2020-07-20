@@ -11,6 +11,8 @@
 
   <modules>
     <module>SpringCloud-provider-payment8001</module>
+    <module>SpringCloud-consumer-order80</module>
+      <module>SpringCloud-api-commons</module>
   </modules>
 
   <name>Maven</name>
