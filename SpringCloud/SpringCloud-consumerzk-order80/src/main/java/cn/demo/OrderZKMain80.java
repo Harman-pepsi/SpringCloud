@@ -3,21 +3,17 @@ package cn.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * @Classname PaymentMain8001
- * @Description
+ * @Classname OrderZKMain80
+ * @Description TODO
+ * @Date 2020/7/21 18:06
  * @Created by XJC·AW
- * @Date 2020/7/17 1:27
- * @Version V1.0.0
- * @Since 1.0
  */
 @SpringBootApplication
-@EnableEurekaClient
 @EnableDiscoveryClient
-public class PaymentMain8001 {
+public class OrderZKMain80 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8001.class,args);
+        SpringApplication.run(OrderZKMain80.class,args);
     }
 }

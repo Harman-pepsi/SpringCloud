@@ -1,0 +1,20 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: springcloud-provider-payment
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}

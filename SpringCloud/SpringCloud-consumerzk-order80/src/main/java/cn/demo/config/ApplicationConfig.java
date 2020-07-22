@@ -5,11 +5,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @Classname ApplicationConfig
+ * @Description TODO
+ * @Date 2020/7/21 18:07
+ * @Created by XJC·AW
+ */
 @Configuration
-public class ApplicationContextConfig {
+public class ApplicationConfig {
 
     @Bean
-    //@LoadBalanced //注释掉，使用自定义负载均衡
+    @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }

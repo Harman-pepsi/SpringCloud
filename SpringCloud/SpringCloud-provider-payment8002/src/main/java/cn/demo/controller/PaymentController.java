@@ -4,13 +4,11 @@ import cn.demo.entry.CommonResult;
 import cn.demo.entry.Payment;
 import cn.demo.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @Classname PaymentController
@@ -30,9 +28,6 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
-    @Resource
-    private DiscoveryClient discoveryClient;
-
     @PostMapping(value = "/payment/create")
     public CommonResult create(@RequestBody Payment payment){
         int iResult = paymentService.create(payment);
@@ -47,23 +42,9 @@ public class PaymentController {
         return payment != null ? new CommonResult(200,"查询成功!,ServerPort:" + serverPort,payment) : new CommonResult(500,"无对应id记录，查询失败!",null);
     }
 
-    @GetMapping(value = "/payment/discovery")
-    public Object discovery(){
-        List<String> services = discoveryClient.getServices();
-        for (String service : services) {
-            log.info("DiscoveryClient services -->" + service);
-        }
-
-        List<ServiceInstance> instances = discoveryClient.getInstances("SPRINGCLOUD-PAYMENT-SERVICE");
-        for (ServiceInstance instance : instances) {
-            log.info("instance -->id:" + instance.getServiceId() + "\tport:" + instance.getPort() + "\turi:" + instance.getUri());
-        }
-
-        return this.discoveryClient;
-    }
-
     @GetMapping(value = "/payment/lb")
     public String getPaymentLB(){
         return serverPort;
     }
+
 }
