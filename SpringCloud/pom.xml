@@ -19,6 +19,10 @@
       <module>SpringCloud-provider-payment8003</module>
       <module>SpringCloud-consumerzk-order80</module>
       <module>SpringCloud-provider-payment8004</module>
+      <module>SpringCloud-consumer-feign-order80</module>
+      <module>SpringCloud-provider-hystrix-payment8001</module>
+      <module>SpringCloud-comsumer-feign-hystrix-order80</module>
+      <module>SpringCloud-consumer-hystrix-dashboard9001</module>
   </modules>
 
   <name>Maven</name>

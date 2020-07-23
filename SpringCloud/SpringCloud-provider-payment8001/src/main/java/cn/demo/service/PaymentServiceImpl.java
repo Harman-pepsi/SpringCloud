@@ -1,4 +1,4 @@
-package cn.demo.service.impl;
+package cn.demo.service;
 
 import cn.demo.dao.IPaymentDao;
 import cn.demo.entry.Payment;
