@@ -23,6 +23,7 @@
       <module>SpringCloud-provider-hystrix-payment8001</module>
       <module>SpringCloud-comsumer-feign-hystrix-order80</module>
       <module>SpringCloud-consumer-hystrix-dashboard9001</module>
+      <module>SpringCloud-gateway-gateway9527</module>
   </modules>
 
   <name>Maven</name>
