@@ -24,6 +24,7 @@
       <module>SpringCloud-comsumer-feign-hystrix-order80</module>
       <module>SpringCloud-consumer-hystrix-dashboard9001</module>
       <module>SpringCloud-gateway-gateway9527</module>
+      <module>SpringCloud-config-center3344</module>
   </modules>
 
   <name>Maven</name>
