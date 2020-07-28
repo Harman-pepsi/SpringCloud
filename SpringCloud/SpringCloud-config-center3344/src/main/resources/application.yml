@@ -12,11 +12,74 @@ spring:
           uri: https://github.com/Harman-pepsi/springcloud-config.git #Github上面的git仓库名字
           username: 853696509@qq.com
           password: 1314Xujinchuan
+          #uri: git@github.com:Harman-pepsi/springcloud-config.git #ssh地址
           search-paths:
             - springcloud-config
+          #passphrase: Harman #访问私钥口令
+          #如果使用的是 Git SSH configuration，必须要配置 ignore-local-ssh-settings: true 和 private-key ！！！
+          #private-key 要注意 是在 | 后加上你的ssh私钥，不然也会报错（私钥在C:\Users\你的用户名.ssh文件下，id_rsa）
       label: master
+
+  rabbitmq:
+    host: 192.168.0.105
+    port: 5672
+    username: admin
+    password: admin
+
+#          force-pull: true
+#          ignore-local-ssh-settings: true
+#          strict-host-key-checking: false
+#          private-key: |
+#                        -----BEGIN OPENSSH PRIVATE KEY-----
+#                        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+#                        NhAAAAAwEAAQAAAYEAzn9E9T2wWGOC+lSFuBfQgJvTL3vl0yKdb1SsjFnU4g9Em41tP17W
+#                        9GKbnhV/oGrjNnfDTCRwQhglUqiI++e52FZN3QV81DyG3u5TUkfZp6ORvIRbYS1XcfRpvY
+#                        Ov3PEWbSXFxsonlc9nJ3f78RsN3d2Xmf/hRTWF+4HOASZyCaHY8Gi51upn+bNTk0QDsw10
+#                        eiO3RVEVwsEw3bpEtF8Uki50coq5IMsnFlLsVWRR3+NPzvtwgv+9w9PnNNOmS6jcs+4KmH
+#                        6ZwYwSDhNVOb9dorNb/i5pJ/FbJr9UY+mKk9jiI3lxcixKlQfOZZwY7N7q9qfjCyQQL4MV
+#                        k/wHN9mpee5ofq6ZA4s6WiDMs2Q06wnkEA3KxL/owrFpezaDfdj67XwFSfpIpWNhH1BdYi
+#                        juOgLIkUXFQqFQHQKfbaJd5SaR2+XYTAyWlH1jHn/Wwo4k0HGzHx/uv1L2uohU9aRpE+JR
+#                        nIj7Bjtx9sDKM+TLt1kE1JbqIq7a2+AF9T8KSO5HAAAFiNq32Dbat9g2AAAAB3NzaC1yc2
+#                        EAAAGBAM5/RPU9sFhjgvpUhbgX0ICb0y975dMinW9UrIxZ1OIPRJuNbT9e1vRim54Vf6Bq
+#                        4zZ3w0wkcEIYJVKoiPvnudhWTd0FfNQ8ht7uU1JH2aejkbyEW2EtV3H0ab2Dr9zxFm0lxc
+#                        bKJ5XPZyd3+/EbDd3dl5n/4UU1hfuBzgEmcgmh2PBoudbqZ/mzU5NEA7MNdHojt0VRFcLB
+#                        MN26RLRfFJIudHKKuSDLJxZS7FVkUd/jT877cIL/vcPT5zTTpkuo3LPuCph+mcGMEg4TVT
+#                        m/XaKzW/4uaSfxWya/VGPpipPY4iN5cXIsSpUHzmWcGOze6van4wskEC+DFZP8BzfZqXnu
+#                        aH6umQOLOlogzLNkNOsJ5BANysS/6MKxaXs2g33Y+u18BUn6SKVjYR9QXWIo7joCyJFFxU
+#                        KhUB0Cn22iXeUmkdvl2EwMlpR9Yx5/1sKOJNBxsx8f7r9S9rqIVPWkaRPiUZyI+wY7cfbA
+#                        yjPky7dZBNSW6iKu2tvgBfU/CkjuRwAAAAMBAAEAAAGBALJNqLCOBNA9lOIsy43rWklCw/
+#                        bzZ76I3CI+ngNOqghMoLQkSVn3vWomHzNAYwSUZv8oKIV9zUT07n1SM344V/vagb9ANspY
+#                        PSkP5vhcPC+JiJScQP9HFIO8RPW0WM1Ri0jR3dXJxqaQAQVOkEhfUPjrlzUNgmmtTrSeH9
+#                        BUbxGsI9NqylUt8HvnAVpe10brblDsuBptannRMS2z4hFRLEURQdGJwVL0uBqJnbIaPqww
+#                        7j/OUxd6VlRajADMZIJeGi6uyLmhu2/3NLVAim6v2gOo2lh8iI8xIMg6ts2Ni1EJgQT+6M
+#                        xKC91AzYPs+c9DlrWKdpcrcdWmgRSS96sIgIV+lKqwpx6PLR0EFk3jubqP1/zTc76RrH+E
+#                        6bn7UEBQ3PeuEOOgXZNOPsV6bKZlgvHSUC9WFX3dQkCOd33WqtVF3Y0aYaP3Op58zu1jne
+#                        xLKOe+oM0fUU3Pq5izEKHSqBJPwKLNWT51DMxxSnN/vvYGLrqCyuGaC40kJKb4Dr3acQAA
+#                        AMEAy9GO7bLJPXTHIomg+1ruYccblwptb5iyfY8hpjxeMW59iySv4JyIZ+cdbwnFmBITEA
+#                        bmGNFoREahCLIeUCmFyVOdyBPtgXUS1cKO7zbIOmNdmLFp4LYYGVD6uU1C696sc2kKKDaJ
+#                        9MtN7zzzWJBl5buMqRbM4w0hAvdOJ/xn3HRJLBXAKlyZczg9gYk7gVFoCdmhQ7kAErkixN
+#                        f5GrOwBgDESXK6b/3Mlenib5hUJ8e/AnoI1eKl8TulQYGSBIEsAAAAwQDz4RIqLfct6/e3
+#                        lR1jsDLzczDtjSSh8p5x0JHxVso4O4bl8xAVJVFAV+xpAH5dMlOkhe6NuGO21PibNzgKuX
+#                        AIlPz8B5VtG6VY8C4rp4n7WoyVkmLjZtTtk52zZEgo36GK5I/0i78TyCYFbwyAoVVVITK5
+#                        QvTxqX4jbkWoAWvNvbTzGXC4mYGdbFBAGpfLl9/G6iFsIuMPehvLC5NQ7kkG31pBkitErg
+#                        9xOiRhHtzG3q2AYZKF97uz/iq1JFmolKkAAADBANjClBS/8asftooq9nA7Dc55j++pI5Kt
+#                        RGzTJn7pqNznC4vFC6v5Pk33UwxH3lhw06Ct7murOq7BtQk3n5lV5bcls946KXzLGdi3+v
+#                        mjZjRDjK0FPq1NwQSfvObvoZYMjl7Ygjk6ncPEgY+vTLlwSMjF+xR9NQtkdJJmnm795OVJ
+#                        aM8636MnA+lW42v2WfocNv25dKXtdYWQFAeAXpXRTznETVi9CrPiaM64rpZEDTbISJrujS
+#                        HMVn2bI/5NO09RbwAAABA4NTM2OTY1MDlAcXEuY29tAQ==
+#                        -----END OPENSSH PRIVATE KEY-----
+
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+#rabbit相关配置 暴露bus刷新配置的端点
+#全通知:curl -X POST "http://localhost:3344/actuator/bus-refresh
+#定点通知3355 不通知3366:curl -X POST "http://localhost:3344/actuator/bus-refresh/springcloud-config-client:3355"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

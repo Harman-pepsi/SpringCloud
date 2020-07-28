@@ -25,6 +25,11 @@
       <module>SpringCloud-consumer-hystrix-dashboard9001</module>
       <module>SpringCloud-gateway-gateway9527</module>
       <module>SpringCloud-config-center3344</module>
+      <module>SpringCloud-config-client3355</module>
+      <module>SpringCloud-config-client3366</module>
+      <module>SpringCloud-provider-rabbitmq-stream8801</module>
+      <module>SpringCloud-consumer-rabbitmq-stream8802</module>
+    <module>SpringCloudAilibaba-provider-payment9001</module>
   </modules>
 
   <name>Maven</name>
