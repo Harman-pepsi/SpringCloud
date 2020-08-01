@@ -30,6 +30,9 @@
       <module>SpringCloud-provider-rabbitmq-stream8801</module>
       <module>SpringCloud-consumer-rabbitmq-stream8802</module>
     <module>SpringCloudAilibaba-provider-payment9001</module>
+      <module>SpringCloudAilibaba-provider-payment9002</module>
+    <module>SpringCloudAlibaba-consumer-nacos-order83</module>
+      <module>SpringCloudAlibaba-config-nacos-client3377</module>
   </modules>
 
   <name>Maven</name>
